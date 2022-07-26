@@ -6,10 +6,8 @@ from OpenGL.GLU import *
 
 def cube(vertices, edges, surfaces, colors):
     glBegin(GL_QUADS)
-
     for surface in surfaces:
         x = 0
-
         for vertex in surface:
             x += 1
             glColor3fv((colors[x]))
@@ -82,7 +80,7 @@ def main():
     gluPerspective(45, (display[0] / display[1]), 0.1, 50.0)
 
     glTranslatef(0.0, 0.0, -12)
-    glRotatef(20, 10, 0, 0)
+    glRotatef(0, 2, 0, 0)
 
     while True:
         for event in pygame.event.get():
@@ -90,7 +88,7 @@ def main():
                 pygame.quit()
                 quit()
 
-        glRotatef(3, 0, 1, 0)
+        glRotatef(1, 0, 1, 0)
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
         cube(vertices, edges, surfaces, colors)
         pygame.display.flip()
