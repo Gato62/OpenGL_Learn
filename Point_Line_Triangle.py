@@ -20,7 +20,7 @@ def point():
 def edge():
     glLineWidth(2)              # Point size
 
-    glBegin(GL_LINE_LOOP)       # Draw points
+    glBegin(GL_LINE_LOOP)      # Draw points
     glColor3f(.2, .2, .2)       # Dolor points
 
     glVertex3f(0.0, 0.0, 0.0)   # point 1
@@ -29,16 +29,15 @@ def edge():
     glVertex3f(1.0, 0.0, 0.0)   # point 4
     glEnd()
 
-
 def triangle():
-    glBegin(GL_TRIANGLES)       # Draw triangle
-    glColor3f(.2, .6, .2)       # Dolor points
+    glBegin(GL_TRIANGLES)  # Draw triangle
+    glColor3f(.2, .6, .2)  # Dolor points
 
-    glVertex3f(0.0, 0.0, 0.0)   # point 1
+    glVertex3f(0.0, 0.0, 0.0)  # point 1
     glColor3f(.1, .2, .7)
-    glVertex3f(0.0, 1.0, 0.0)   # point 2
+    glVertex3f(0.0, 1.0, 0.0)  # point 2
     glColor3f(.7, .3, .1)
-    glVertex3f(1.0, 1.0, 0.0)   # point 3
+    glVertex3f(1.0, 1.0, 0.0)  # point 3
     glEnd()
 
 
@@ -59,11 +58,9 @@ def main(width, height):
         glClearColor(.4, .4, .4, .0)                            # Color of the screen
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)      # Screen
 
-# Draw objects
-
         edge()
-        triangle()
         point()
+        triangle()
 
         pygame.display.flip()
         pygame.time.wait(10)
