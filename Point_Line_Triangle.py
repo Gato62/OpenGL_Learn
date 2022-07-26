@@ -50,7 +50,6 @@ def main(width, height):
         edge()
         point()
 
-
         pygame.display.flip()
         pygame.time.wait(10)
 
