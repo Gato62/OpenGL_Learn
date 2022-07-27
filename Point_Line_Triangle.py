@@ -51,8 +51,8 @@ def main(width, height):
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)      # Screen cleaning
 
         glLoadIdentity()
-        glScalef(.3, .3, 1)
-        glTranslatef(.4, .4, .0)
+        glScalef(.5, .5, 1)
+        glTranslatef(.2, .2, .0)
 
         for index in range(220):
             # glLoadIdentity()                                        # Coordinate reset
