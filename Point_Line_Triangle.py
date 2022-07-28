@@ -28,7 +28,7 @@ def edge():
 
 def triangle():
     glBegin(GL_TRIANGLES)      # Draw triangle
-    glColor3f(.0, .0, .0), glVertex2f(0.0, 0.0)  # point 1
+    glColor3f(.1, .2, .4), glVertex2f(0.0, 0.0)  # point 1
     glColor3f(.1, .7, .2), glVertex2f(1.0, 0.0)  # point 2
     glColor3f(.7, .3, .2), glVertex2f(0.0, 1.0)  # point 3
     glEnd()
@@ -47,7 +47,7 @@ def main(width, height):
                 pygame.quit()
                 quit()
 
-        glClearColor(.4, .4, .4, .0)                            # Color of the screen
+        glClearColor(.0, .0, .05, .0)                            # Color of the screen
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)      # Screen cleaning
 
         glLoadIdentity()
