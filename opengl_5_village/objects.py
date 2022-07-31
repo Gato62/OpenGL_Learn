@@ -1,7 +1,6 @@
 import math
 
 from OpenGL.GL import *
-from OpenGL.GLU import *
 
 
 def rectangle(dx, dy, width, height, red, green, blue):
@@ -19,7 +18,8 @@ def rectangle(dx, dy, width, height, red, green, blue):
 
 
 def triangle(dx, dy, hypotenuse, height, red, green, blue):
-    dx, dy, hypotenuse, height, red, green, blue = dx / 10, dy / 10, hypotenuse / 10, height / 10, red / 10, green / 10, blue / 10
+    dx, dy, hypotenuse, height = dx / 10, dy / 10, hypotenuse / 10, height / 10
+    red, green, blue = red / 10, green / 10, blue / 10
 
     glColor3f(red, green, blue)
 
@@ -39,9 +39,9 @@ def house(scale, x, y):
     glScalef(scale, scale, scale)
 
     rectangle(-.5, -6, 1, 3, 6, 2, 1)
-    rectangle(-4, -8, 5, 3, 8, 4, 2)  # dx, dy, width, height, red, green, blue
+    rectangle(-4, -8, 5, 3, 8, 4, 2)        # dx, dy, width, height, red, green, blue
     rectangle(-2.5, -7, 2, 1, 6, 8, 10)
-    triangle(-4.5, -5, 6, 2, 6, 4, 2)  # dx, dy, hypotenuse, height , r, g, b
+    triangle(-4.5, -5, 6, 2, 6, 4, 2)       # dx, dy, hypotenuse, height , r, g, b
 
     glPopMatrix()
 
@@ -59,8 +59,3 @@ def circle(edge, radius):
         y = math.cos(a * i) * radius
         glVertex2f(x, y)
     glEnd()
-
-
-
-
-
